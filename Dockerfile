@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Set working directory
-WORKDIR /app
+WORKDIR /web
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -12,12 +12,11 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Install spaCy and download the model
-RUN pip install spacy && python -m spacy download en_core_web_sm
+
 
 # Copy requirements and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the application code
 COPY . .
@@ -25,9 +24,6 @@ COPY . .
 # Expose port for Streamlit
 EXPOSE 8501
 
-# Set environment variables
-ENV LC_ALL=C.UTF-8
-ENV LANG=C.UTF-8
 
 # Create a non-root user
 RUN useradd -m streamlit
@@ -36,4 +32,4 @@ USER streamlit
 
 # Command to run the application
 ENTRYPOINT ["streamlit", "run"]
-CMD ["scraper.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["web.py", "--server.port=8501", "--server.address=0.0.0.0"]
