@@ -2,8 +2,8 @@
 
 A powerful and user-friendly web scraping application built with Streamlit that allows users to recursively extract content from websites. The scraper collects text content, links, images, and metadata while respecting website crawling etiquette.
 
-![Web Content Scraper Interface](![image](https://github.com/user-attachments/assets/e450af17-8bfb-4049-b815-c2659e7771a2)
-)
+![image](https://github.com/user-attachments/assets/7905a211-b291-417a-9952-4cc25291cec9)
+
 
 ## Live Demo 🌐
 
@@ -169,4 +169,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support 💬
 
-For support, please open an issue in the GitHub repository or contact [your-email@example.com]
+For support, please open an issue in the GitHub repository or contact [karravularambabu@gmail.com]
