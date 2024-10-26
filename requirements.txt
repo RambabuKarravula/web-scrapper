@@ -1,28 +1,28 @@
 # Web framework
-streamlit==1.27.0
+streamlit
 
 # Data processing
-pandas==2.1.0
-numpy==1.24.3
+pandas
+numpy
 
 # Web scraping
-requests==2.31.0
-beautifulsoup4==4.12.2
-fake-useragent==1.2.1
-lxml==4.9.3
-html5lib==1.1
+requests
+beautifulsoup4
+fake-useragent
+lxml
+html5lib
 
 # HTTP handling
-urllib3==2.0.4
-certifi==2023.7.22
-charset-normalizer==3.2.0
+urllib3
+certifi
+charset-normalizer
 
 # Data formatting
-python-dateutil==2.8.2
-pytz==2023.3
+python-dateutil
+pytz
 
 # Error handling and logging
-tenacity==8.2.3
+tenacity
 
 # Development tools
-python-dotenv==1.0.0
+python-dotenv
