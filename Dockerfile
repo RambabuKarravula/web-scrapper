@@ -13,22 +13,15 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-
 # Copy requirements and install Python dependencies
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Copy the application code
 COPY . .
 
 # Expose port for Streamlit
 EXPOSE 8501
-
-
-# Create a non-root user
-RUN useradd -m streamlit
-RUN chown -R streamlit:streamlit /app
-USER streamlit
 
 # Command to run the application
 ENTRYPOINT ["streamlit", "run"]
